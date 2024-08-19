@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  height: 100vh;
+
+  .menu {
+    position: relative;
+
+    .store {
+      height: 70px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .xoay {
+        animation: xoay 1s ease-in;
+      }
+      .nguoc {
+        animation: nguoc 1s ease-in;
+      }
+      h5 {
+        font-size: 25px;
+        margin-left: 10px;
+      }
+
+      i {
+        margin-right: 15px;
+      }
+
+      .icon {
+        i {
+          background-color: black;
+          color: white;
+          position: absolute;
+          padding: 7px 10px;
+          border-radius: 50%;
+          top: 50%;
+          transform: translate(50%, -50%);
+        }
+      }
+
+
+    }
+
+    .ui {
+      font-size: 20px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgb(57, 176, 176);
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      font-size: 15px;
+
+      &:hover {
+        background-color: rgb(8, 8, 8);
+        color: white;
+      }
+
+      h5 {
+        margin-left: 20px;
+      }
+    }
+
+  }
+}
+
+.right {
+  .header-right {
+    height: 70px;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes xoay {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes nguoc {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
