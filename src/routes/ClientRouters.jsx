@@ -1,11 +1,9 @@
-import React from 'react';
 
-function ClientRouters(props) {
-    return (
-        <div>
-            
-        </div>
-    );
-}
-
-export default ClientRouters;
+import Home from '../pages/client/Home';
+const RouterClients = [
+    {
+        path:"/",
+        Component:Home
+    },
+]
+export default RouterClients;

@@ -8,88 +8,88 @@ img {
   height: 100%;
   width: 100%;
 }
+.khoaHome {
 
-.left {
-  height: 100vh;
-
-  .menu {
-    position: relative;
-
-    .store {
-      height: 70px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .xoay {
-        animation: xoay 1s ease-in;
+  .left {
+    .menu {
+      .store {
+        .xoay {
+          animation: xoay 1s ease-in;
+        }
+        .nguoc {
+          animation: nguoc 1s ease-in;
+        }
+        .icon {
+          i {
+            background-color: black;
+            color: white;
+            position: absolute;
+            padding: 7px 10px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(50%, -50%);
+          }
+        }
+  
+  
       }
-      .nguoc {
-        animation: nguoc 1s ease-in;
+  
+      .ui {
+        font-size: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(57, 176, 176);
       }
-      h5 {
-        font-size: 25px;
-        margin-left: 10px;
-      }
-
-      i {
-        margin-right: 15px;
-      }
-
-      .icon {
-        i {
-          background-color: black;
+  
+      .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 15px;
+  
+        &:hover {
+          background-color: rgb(8, 8, 8);
           color: white;
-          position: absolute;
-          padding: 7px 10px;
-          border-radius: 50%;
-          top: 50%;
-          transform: translate(50%, -50%);
         }
       }
-
-
-    }
-
-    .ui {
-      font-size: 20px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid rgb(57, 176, 176);
-    }
-
-    .nav-item {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      font-size: 15px;
-
-      &:hover {
-        background-color: rgb(8, 8, 8);
-        color: white;
-      }
-
-      h5 {
-        margin-left: 20px;
-      }
-    }
-
-  }
-}
-
-.right {
-  .header-right {
-    height: 70px;
-
-    h1 {
-      font-size: 25px;
-    }
-
-    p {
-      font-size: 15px;
+  
     }
   }
 }
+
+
+
+.head{
+  height: 70px;
+  ul{
+    li{
+      &:hover{
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+      }
+    }
+    .dangnhap{
+      &:hover{
+        background-color: #fff;
+        color: black;
+
+      }
+    }
+  }
+}
+
+
+
+.group {
+  transition: ease 0.5s;
+
+  &:hover {
+    transition: ease 0.5s;
+  }
+    &:hover .detail-movie{
+    display: block !important;
+   }
+}
+
 
 .hidden {
   display: none !important;
@@ -99,15 +99,75 @@ img {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(180deg);
   }
 }
+
 @keyframes nguoc {
   from {
     transform: rotate(180deg);
   }
+
   to {
     transform: rotate(0);
   }
 }
+
+
+
+/* tablet tro lên  */
+@media screen and (min-width: 769px) {
+  .khoaHome {
+    display: flex;
+    .left {
+      height: 100vh;
+    }
+  }
+}
+
+ /* mobile */
+ @media screen and (max-width: 768px) {
+    .khoaHome { 
+      .left {
+        .main-left {
+          display: none;
+         } 
+      }
+    }
+    .head {
+      position: relative;
+      border-bottom: 1px solid white;
+      .logo {
+        margin-left: 15px;
+      }
+        ul {
+          position: absolute;
+          flex-direction: column;
+          background-color: black;
+          width: 100%;
+          top: 70px;
+          left: 0;
+         
+          li {
+            border-bottom: 1px solid white;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+        }
+    }
+    .menu {
+      display: none;
+    }
+ }
+ 
+ td {
+   padding: 8px !important;
+ }
